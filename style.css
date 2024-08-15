@@ -1,80 +1,85 @@
-body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
-    background-image: url(images/stadium.avif);
-    background-size: 100% 100%;
-    height: 100vh;
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  background-image: url(images/stadium.avif);
+  background-size: 100% 100%;
+  height: 100vh;
 }
 
 /* Team Title */
-.teamTitle{
-    background: linear-gradient(to right, #4975f0, #854527);
-    border-radius: 100px;
-
+.teamTitle {
+  background: linear-gradient(to right, #4975f0, #854527);
+  border-radius: 100px;
+  width: 100% !important;
 }
-.btn{
-    padding: 12px !important;
-    margin-top: 50px !important;
-    margin-right: 70px;
-    margin-left: 50px;
-    margin-bottom: 30px;
-    background-color: #4975f0 !important;
-    color: aliceblue !important;
-    width: 200px !important;
-    border-radius: 25px !important;
+.customButton {
+  padding: 10px !important;
+  margin-top: 50px !important;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  margin-left: 50px;
+  background-color: #4975f0 !important;
+  color: aliceblue !important;
+  width: 100px !important;
+  border-radius: 25px !important;
 }
 
 /* Team Logo */
-.teamLogo{
-    height: 200px !important;
-    width: 200px !important;
-    border-radius: 50%;
+.teamTitle button:nth-child(1) {
+  background-color: rgb(74, 74, 255);
+  color: whitesmoke;
+}
+.teamTitle button:nth-child(5) {
+  background-color: rgb(190, 73, 26) !important;
+  color: whitesmoke;
+}
+
+.teamLogo {
+  height: 200px !important;
+  width: 200px !important;
+  border-radius: 50%;
 }
 
 /* Team Score  */
 .button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
-.button-container button {
-    margin: 0 5px;
-    width: 50px !important;
-    font-size: 30px;
-}
-.button-container .score{
-    margin-top: 40px;
-    font-size: 2.5rem;
-    color: aliceblue;
+
+.button-container .score {
+  margin-top: 40px;
+  font-size: 2.5rem;
+  color: aliceblue;
 }
 
 /* Table Component */
 
 .table_component {
-    overflow: auto;
-    width: 100%;
+  overflow: auto;
+  width: 100%;
 }
 
 .table_component table {
-    border: 1px solid #e2e2ee;
-    height: 100%;
-    width: 70%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    border-spacing: 1px;
-    text-align: center;
+  border: 1px solid #e2e2ee;
+  height: 100%;
+  width: 70%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 1px;
+  text-align: center;
 }
 
 .table_component caption {
-    caption-side: top;
-    text-align: center;
+  caption-side: top;
+  text-align: center;
 }
 
 .table_component td {
-    border: 1px solid #e2e2ee;
-    background-color: #ffffff;
-    color: #fff;
-    padding: 5px;
-    background-color: #e2e2ee3d;
-    font-weight: bold;
+  border: 1px solid #e2e2ee;
+  background-color: #ffffff;
+  color: #fff;
+  padding: 5px;
+  background-color: #e2e2ee3d;
+  font-weight: bold;
 }

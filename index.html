@@ -13,21 +13,32 @@
     />
   </head>
   <body>
+    <div id="liveAlertPlaceholder" class="d-none">
+      <div class="alert alert-danger" role="alert">
+        0'dan Küçük bir sayı girilemez!
+      </div>
+    </div>
+
     <div class="container">
       <div
         class="text-center d-flex column-gap-5 justify-content-center align-items-center text-light teamTitle"
       >
-        <h3 class="display-4" id="Team1Name">Real Madrid</h3>
+        <button class="btn" id="changeTeamName1" onclick="setNamePrompt('A')">
+          Change name Team 1
+        </button>
+        <h3 class="display-4" id="TeamA">Real Madrid</h3>
         <h3>Vs</h3>
-        <h3 class="display-4" id="Team2Name">Barcelona</h3>
+        <h3 class="display-4" id="TeamB">Barcelona</h3>
+        <button class="btn" id="changeTeamName2" onclick="setNamePrompt('B')">
+          Change name Team 2
+        </button>
       </div>
       <div
         class="row d-flex justify-content-center flex-row text-light align-items-centerß"
       >
-        <button class="btn" id="changeTeamName1">Change name Team 1</button>
         <h3 class="display-5 w-25 mt-lg-3">Score Table</h3>
-        <button class="btn" id="changeTeamName2">Change name Team 2</button>
       </div>
+
       <div class="container">
         <div class="row d-flex justify-content-between mt-5">
           <div class="col-lg-6 d-flex flex-column align-items-center">
@@ -39,15 +50,37 @@
               />
             </div>
             <div class="col-lg-2 text-center text-light my-auto">
-              <span class="display-1" id="team1ScoreCount">0</span>
+              <span class="display-1" id="TeamScoreA">0</span>
             </div>
             <div class="button-container">
-              <button class="btn btn-primary" id="team1-scoreincrease">
+              <button
+                class="btn btn-primary customButton"
+                id="team1-scoreincrease"
+                onclick="increaseScore('A')"
+              >
                 +
               </button>
-              <span class="score mx-2">Score</span>
-              <button class="btn btn-secondary" id="team1-scorereduction">
+              <button
+                class="btn btn-danger customButton"
+                id=""
+                onclick="teamScoreReset('A')"
+              >
+                Temizle
+              </button>
+              <button
+                class="btn btn-secondary customButton"
+                id="team1-scorereduction "
+                onclick="decreaseScore('A')"
+              >
                 -
+              </button>
+            </div>
+            <div class="d-grid">
+              <button
+                class="btn btn-success px-5 py-2 rounded-4"
+                onclick="setScorePrompt('A')"
+              >
+                Gol degiştir
               </button>
             </div>
           </div>
@@ -60,15 +93,37 @@
               />
             </div>
             <div class="col-lg-2 text-center text-light my-auto">
-              <span class="display-1" id="team2ScoreCount">0</span>
+              <span class="display-1" id="TeamScoreB">0</span>
             </div>
             <div class="button-container">
-              <button class="btn btn-primary w-25" id="team2-scoreincrease">
+              <button
+                class="btn btn-primary w-25 customButton"
+                id="team2-scoreincrease"
+                onclick="increaseScore('B')"
+              >
                 +
               </button>
-              <span class="score mx-2">Score</span>
-              <button class="btn btn-secondary" id="team2-scorereduction">
+              <button
+                class="btn btn-danger customButton"
+                id=""
+                onclick="teamScoreReset('B')"
+              >
+                Temizle
+              </button>
+              <button
+                class="btn btn-secondary customButton"
+                id="team2-scorereduction"
+                onclick="decreaseScore('B')"
+              >
                 -
+              </button>
+            </div>
+            <div class="d-grid">
+              <button
+                class="btn btn-success px-5 py-2 rounded-4"
+                onclick="setScorePrompt('B')"
+              >
+                Gol degiştir
               </button>
             </div>
           </div>
@@ -76,7 +131,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container mt-5">
       <div class="col-12">
         <div class="table_component" role="region" tabindex="0">
           <table class="table mx-auto">
